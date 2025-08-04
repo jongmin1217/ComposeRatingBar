@@ -18,7 +18,7 @@ It allows users to select fractional ratings with custom step intervals, support
 
 
 ### Installation
-To use StepSlider in your Android project, follow these steps:
+To use RatingBar in your Android project, follow these steps:
 
 1. Add the JitPack repository to your root build.gradle at the end of repositories:
 
@@ -53,7 +53,7 @@ fun MyScreen() {
     )
 }
 ```
-For advanced customization, you can modify the 'itemCount', 'colr', and other properties of the StepSlider.
+For advanced customization, you can modify the 'itemCount', 'colr', and other properties of the RatingBar.
 
 ```kotlin
 RatingBar(
