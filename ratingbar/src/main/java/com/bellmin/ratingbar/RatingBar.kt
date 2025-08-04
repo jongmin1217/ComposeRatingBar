@@ -55,7 +55,10 @@ fun RatingBar(
                     MotionEvent.ACTION_DOWN, MotionEvent.ACTION_MOVE -> {
                         val x  = event.x
                         val value = roundToStep((x*10)/totalWidthPx/(10f/itemCount), step)
-                        if(value<=itemCount) onRatingChange(value)
+                        when{
+                            value <= 0 -> onRatingChange(0f)
+                            value<=itemCount -> onRatingChange(value)
+                        }
                         true
                     }
                     else -> false

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ComposeRatingBar</string>
+    <string name="rating_image">Rating image</string>
+    <string name="selected_color">Selected color</string>
+    <string name="unselected_color">Unselected color</string>
+    <string name="item_count">Item count</string>
+    <string name="step">Step</string>
+    <string name="size">Size</string>
+    <string name="item_spacing">Item spacing</string>
+    <string name="enable">Enable</string>
 </resources>
