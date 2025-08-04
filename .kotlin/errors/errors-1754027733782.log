@@ -1,0 +1,141 @@
+kotlin version: 2.0.21
+error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: /Users/bagjongmin/AndroidStudioProjects/ComposeRatingBar/ratingbar/src/main/java/com/bellmin/ratingbar/RatingBar.kt
+The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:65)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:52)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:38)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:246)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipeline.kt:142)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:148)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:103)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:49)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:101)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileNonIncrementally(IncrementalCompilerRunner.kt:301)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:129)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:675)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:92)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1660)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN name:CustomRatingBar-mTs3Kvc visibility:public modality:FINAL <> (modifier:androidx.compose.ui.Modifier, rating:kotlin.Float, onRatingChanged:kotlin.Function1<kotlin.Float, kotlin.Unit>, starCount:kotlin.Int, painter:androidx.compose.ui.graphics.painter.Painter, size:androidx.compose.ui.unit.Dp, selectedColor:androidx.compose.ui.graphics.Color, unselectedColor:androidx.compose.ui.graphics.Color, spacing:androidx.compose.ui.unit.Dp, enabled:kotlin.Boolean, step:kotlin.Float) returnType:kotlin.Unit
+  annotations:
+    Composable
+  VALUE_PARAMETER name:modifier index:0 type:androidx.compose.ui.Modifier
+  VALUE_PARAMETER name:rating index:1 type:kotlin.Float
+  VALUE_PARAMETER name:onRatingChanged index:2 type:kotlin.Function1<kotlin.Float, kotlin.Unit>
+  VALUE_PARAMETER name:starCount index:3 type:kotlin.Int
+    EXPRESSION_BODY
+      ERROR_EXPR 'Default Stub' type=kotlin.Int
+  VALUE_PARAMETER name:painter index:4 type:androidx.compose.ui.graphics.painter.Painter
+  VALUE_PARAMETER name:size index:5 type:androidx.compose.ui.unit.Dp
+    EXPRESSION_BODY
+      ERROR_EXPR 'Default Stub' type=androidx.compose.ui.unit.Dp
+  VALUE_PARAMETER name:selectedColor index:6 type:androidx.compose.ui.graphics.Color
+    EXPRESSION_BODY
+      ERROR_EXPR 'Default Stub' type=androidx.compose.ui.graphics.Color
+  VALUE_PARAMETER name:unselectedColor index:7 type:androidx.compose.ui.graphics.Color
+    EXPRESSION_BODY
+      ERROR_EXPR 'Default Stub' type=androidx.compose.ui.graphics.Color
+  VALUE_PARAMETER name:spacing index:8 type:androidx.compose.ui.unit.Dp
+    EXPRESSION_BODY
+      ERROR_EXPR 'Default Stub' type=androidx.compose.ui.unit.Dp
+  VALUE_PARAMETER name:enabled index:9 type:kotlin.Boolean
+    EXPRESSION_BODY
+      ERROR_EXPR 'Default Stub' type=kotlin.Boolean
+  VALUE_PARAMETER name:step index:10 type:kotlin.Float
+    EXPRESSION_BODY
+      ERROR_EXPR 'Default Stub' type=kotlin.Float
+  BLOCK_BODY
+    CALL 'public final fun Row$default (modifier: androidx.compose.ui.Modifier?, horizontalArrangement: androidx.compose.foundation.layout.Arrangement.Horizontal?, verticalAlignment: androidx.compose.ui.Alignment.Vertical?, content: @[Composable] @[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.layout.RowScope, kotlin.Unit>, $mask0: kotlin.Int, $handler: kotlin.Any?): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.RowKt' type=kotlin.Unit origin=DEFAULT_DISPATCH_CALL
+      modifier: GET_VAR 'modifier: androidx.compose.ui.Modifier declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=androidx.compose.ui.Modifier origin=null
+      horizontalArrangement: COMPOSITE type=androidx.compose.foundation.layout.Arrangement.Horizontal? origin=DEFAULT_VALUE
+        CONST Null type=androidx.compose.foundation.layout.Arrangement.Horizontal? value=null
+      verticalAlignment: COMPOSITE type=androidx.compose.ui.Alignment.Vertical? origin=DEFAULT_VALUE
+        CONST Null type=androidx.compose.ui.Alignment.Vertical? value=null
+      content: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.layout.RowScope, kotlin.Unit> origin=LAMBDA
+        COMPOSITE type=kotlin.Unit origin=null
+        FUNCTION_REFERENCE 'private final fun CustomRatingBar_mTs3Kvc$lambda$1 ($starCount: kotlin.Int, $step: kotlin.Float, $size: androidx.compose.ui.unit.Dp, $painter: androidx.compose.ui.graphics.painter.Painter, $rating: kotlin.Float, $selectedColor: androidx.compose.ui.graphics.Color, $unselectedColor: androidx.compose.ui.graphics.Color, $enabled: kotlin.Boolean, $spacing: androidx.compose.ui.unit.Dp, $onRatingChanged: kotlin.Function1<kotlin.Float, kotlin.Unit>): kotlin.Unit declared in com.bellmin.ratingbar.RatingBarKt' type=@[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.layout.RowScope, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+          $starCount: GET_VAR 'starCount: kotlin.Int declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=kotlin.Int origin=null
+          $step: GET_VAR 'step: kotlin.Float declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=kotlin.Float origin=null
+          $size: GET_VAR 'size: androidx.compose.ui.unit.Dp declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=androidx.compose.ui.unit.Dp origin=null
+          $painter: GET_VAR 'painter: androidx.compose.ui.graphics.painter.Painter declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=androidx.compose.ui.graphics.painter.Painter origin=null
+          $rating: GET_VAR 'rating: kotlin.Float declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=kotlin.Float origin=null
+          $selectedColor: GET_VAR 'selectedColor: androidx.compose.ui.graphics.Color declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=androidx.compose.ui.graphics.Color origin=null
+          $unselectedColor: GET_VAR 'unselectedColor: androidx.compose.ui.graphics.Color declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=androidx.compose.ui.graphics.Color origin=null
+          $enabled: GET_VAR 'enabled: kotlin.Boolean declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=kotlin.Boolean origin=null
+          $spacing: GET_VAR 'spacing: androidx.compose.ui.unit.Dp declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=androidx.compose.ui.unit.Dp origin=null
+          $onRatingChanged: GET_VAR 'onRatingChanged: kotlin.Function1<kotlin.Float, kotlin.Unit> declared in com.bellmin.ratingbar.RatingBarKt.CustomRatingBar-mTs3Kvc' type=kotlin.Function1<kotlin.Float, kotlin.Unit> origin=null
+      $mask0: CONST Int type=kotlin.Int value=6
+      $handler: CONST Null type=kotlin.Any? value=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:40)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:406)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:423)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:168)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:62)
+	... 43 more
+Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't inline method call: CALL 'public final fun Row$default (modifier: androidx.compose.ui.Modifier?, horizontalArrangement: androidx.compose.foundation.layout.Arrangement.Horizontal?, verticalAlignment: androidx.compose.ui.Alignment.Vertical?, content: @[Composable] @[ExtensionFunctionType] kotlin.Function1<androidx.compose.foundation.layout.RowScope, kotlin.Unit>, $mask0: kotlin.Int, $handler: kotlin.Any?): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.RowKt' type=kotlin.Unit origin=DEFAULT_DISPATCH_CALL
+Method: null
+File is unknown
+The root cause java.lang.IllegalStateException was thrown at: org.jetbrains.kotlin.codegen.inline.SourceCompilerForInlineKt.getMethodNode(SourceCompilerForInline.kt:118)
+	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.performInline(InlineCodegen.kt:65)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genInlineCall(IrInlineCodegen.kt:163)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCallGenerator.genCall(IrInlineCallGenerator.kt:36)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:653)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 53 more
+Caused by: java.lang.IllegalStateException: couldn't find inline method Landroidx/compose/foundation/layout/RowKt;.Row$default(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/layout/Arrangement$Horizontal;Landroidx/compose/ui/Alignment$Vertical;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+	at org.jetbrains.kotlin.codegen.inline.SourceCompilerForInlineKt.getMethodNode(SourceCompilerForInline.kt:118)
+	at org.jetbrains.kotlin.codegen.inline.SourceCompilerForInlineKt.loadCompiledInlineFunction(SourceCompilerForInline.kt:96)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.compileInlineFunction(IrSourceCompilerForInline.kt:91)
+	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.compileInline(InlineCodegen.kt:43)
+	at org.jetbrains.kotlin.codegen.inline.InlineCodegen.performInline(InlineCodegen.kt:51)
+	... 65 more
+
+
